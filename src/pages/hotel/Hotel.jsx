@@ -20,13 +20,13 @@ import Reserve from "../../components/reserve/Reserve";
 
 const Hotel = () => {
   const location = useLocation();
-
+  const [stripeToken, setStripeToken] = useState(null);
   const id = location.pathname.split("/")[2];
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading } = useFetch(`https://makemytravel-backend.herokuapp.com/api/hotels/find/${id}`);
+  const { data, loading, error,address } = useFetch(`https://hotel-booking.herokuapp.com/api/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 

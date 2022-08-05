@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./propertyList.css";
 
 const PropertyList = () => {
-  const { data, loading, error } = useFetch("https://hotel-booking.herokuapp.com/api/hotels/countByType");
+  const { data, loading, error } = useFetch("https://bookingapp-server.herokuapp.com/api/hotels/countByType");
   console.log(data)
 
   const images = [

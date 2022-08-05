@@ -3,7 +3,7 @@ import "./featured.css"
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "https://hotel-booking.herokuapp.com/api/hotels/countByCity?cities=Hyderabad,mumbai,newDelhi"
+    "https://bookingapp-server.herokuapp.com/api/hotels/countByCity?cities=bangalore,mumbai,chennai"
   );
   console.log(data);
 
@@ -28,10 +28,10 @@ const Featured = () => {
         </div>
         </div>
         <div className="featuredItem">
-            <img src="https://t-cf.bstatic.com/xdata/images/city/max500/684765.webp?k=3f7d20034c13ac7686520ac1ccf1621337a1e59860abfd9cbd96f8d66b4fc138&o=" alt="" className="featuredImg" />
+            <img src="https://t-cf.bstatic.com/xdata/images/city/max500/684730.webp?k=e37b93d88c1fe12e827f10c9d6909a1def7349be2c68df5de885deaa4bc01ee3&o=" alt="" className="featuredImg" />
         <div className="featuredTitles">
             <h1>
-              New Delhi
+              Chennai
             </h1>
             <h2>{data[2] }properties</h2>
         </div>

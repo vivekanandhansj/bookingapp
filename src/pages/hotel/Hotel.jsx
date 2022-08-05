@@ -26,7 +26,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading, error,address } = useFetch(`https://hotel-booking.herokuapp.com/api/hotels/find/${id}`);
+  const { data, loading, error,address } = useFetch(`https://bookingapp-server.herokuapp.com/api/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -109,10 +109,10 @@ const Hotel = () => {
               <span>{data.address}</span>
             </div>
             <span className="hotelDistance">
-              Excellent location – {data.distance}m from center
+              Excellent location – {data.distance} from center
             </span>
             <span className="hotelPriceHighlight">
-              Book a stay over ${data.cheapestPrice} at this property and get a
+              Book a stay over Rs.{data.cheapestPrice} at this property and get a
               free airport taxi
             </span>
             <div className="hotelImages">
@@ -137,7 +137,7 @@ const Hotel = () => {
                   excellent location score of 9.8!
                 </span>
                 <h2>
-                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{" "}
+                  <b>Rs.{days * data.cheapestPrice * options.room}</b> ({days}{" "}
                   nights)
                 </h2>
                 <button onClick={handleClick}>Reserve or Book Now!</button>

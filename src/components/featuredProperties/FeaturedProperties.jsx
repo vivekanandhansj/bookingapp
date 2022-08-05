@@ -5,7 +5,7 @@ import axios from "axios";
 // import { Link } from "react-router-dom";
 
 const FeaturedProperties = () => {
-  const { data,loading} = useFetch("https://hotel-booking.herokuapp.com/api/hotels?featured=true&limit=4");
+  const { data,loading} = useFetch("https://bookingapp-server.herokuapp.com/api/hotels?featured=true&limit=4");
 
   
   return (
@@ -24,7 +24,7 @@ const FeaturedProperties = () => {
               />  
               <span className="fpName">{item.name}</span>
               <span className="fpCity">{item.city}</span>
-              <span className="fpPrice">Starting from ${item.cheapestPrice}</span>
+              <span className="fpPrice">Starting from Rs.{item.cheapestPrice}</span>
               {item.rating && <div className="fpRating">
                 <button>{item.rating}</button>
                 <span>Excellent</span>

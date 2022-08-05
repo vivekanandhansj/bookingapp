@@ -24,7 +24,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navContainer">
         <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-          <span className="logo">bookyourhotel</span>
+          <span className="logo">MakeMyTravel</span>
         </Link>
         {user ? <button onClick={handleLogout} className="navButton" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>{user.username} {isHovering && <p>Logout</p>}</button> : (
           <div className="navItems">

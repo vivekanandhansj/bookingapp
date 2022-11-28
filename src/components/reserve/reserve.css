@@ -15,6 +15,17 @@
     padding: 20px;
     position: relative;
   }
+  .rContainerBox{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+  }
+ 
+  .rContainerRight{
+    display: grid;
+    
+    grid-row-gap: 40px;
+  }
   
   .rClose {
     position: absolute;

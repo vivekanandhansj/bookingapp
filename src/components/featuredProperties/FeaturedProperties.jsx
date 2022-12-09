@@ -5,7 +5,7 @@ import axios from "axios";
 // import { Link } from "react-router-dom";
 
 const FeaturedProperties = () => {
-  const { data,loading} = useFetch("https://bookingapp-server.vercel.app/api/hotels?featured=true&limit=4");
+  const { data,loading} = useFetch("https://bookingapp-server-86sw59pxz-vivekanandhansj.vercel.app/api/hotels?featured=true&limit=4");
 
   
   return (

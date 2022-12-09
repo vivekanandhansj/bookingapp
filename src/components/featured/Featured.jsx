@@ -3,7 +3,7 @@ import "./featured.css"
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "https://bookingapp-server.herokuapp.com/api/hotels/countByCity?cities=bangalore,mumbai,chennai"
+    "https://snappychat.vercel.app/api/hotels/countByCity?cities=bangalore,mumbai,chennai"
   );
   console.log(data);
 

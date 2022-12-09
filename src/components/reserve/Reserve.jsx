@@ -12,7 +12,7 @@ const KEY ="pk_test_51L8n14SHuogYXHIU3uWvlDwpEkxj1rXHckGYg59RVBgpm6rgHjIqC3mQQ2N
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const [stripeToken, setStripeToken] = useState(null);
-  const { data, loading, error } = useFetch(`https://bookingapp-server.herokuapp.com/api/hotels/room/${hotelId}`);
+  const { data, loading, error } = useFetch(`https://snappychat.vercel.app/api/hotels/room/${hotelId}`);
   const { dates } = useContext(SearchContext);
 
   const getDatesInRange = (startDate, endDate) => {

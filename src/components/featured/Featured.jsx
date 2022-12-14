@@ -3,7 +3,7 @@ import "./featured.css"
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "https://bookingapp-server-86sw59pxz-vivekanandhansj.vercel.app/api/hotels/countByCity?cities=bangalore,mumbai,chennai"
+    "https://bookingapp-server.onrender.com/api/hotels/countByCity?cities=bangalore,mumbai,chennai"
   );
   console.log(data);
 

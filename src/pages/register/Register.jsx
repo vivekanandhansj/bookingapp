@@ -23,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://bookingapp-server-86sw59pxz-vivekanandhansj.vercel.app/api/auth/register", credentials);
+      const res = await axios.post("https://bookingapp-server.onrender.com/api/auth/register", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/login")
     } catch (err) {
